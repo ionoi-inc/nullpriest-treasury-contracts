@@ -1,0 +1,43 @@
+{
+  "name": "nullpriest-treasury-integration",
+  "version": "1.0.0",
+  "description": "Fee routing system for NullPriest DAO on Base Mainnet",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "test:coverage": "hardhat coverage",
+    "test:gas": "REPORT_GAS=true hardhat test",
+    "compile": "hardhat compile",
+    "deploy:local": "hardhat run scripts/deploy-treasury-integration.js --network localhost",
+    "deploy:testnet": "hardhat run scripts/deploy-treasury-integration.js --network base-sepolia",
+    "deploy:mainnet": "hardhat run scripts/deploy-treasury-integration.js --network base",
+    "verify": "hardhat verify --network base",
+    "node": "hardhat node",
+    "clean": "hardhat clean"
+  },
+  "keywords": [
+    "ethereum",
+    "solidity",
+    "base",
+    "treasury",
+    "dao",
+    "nullpriest"
+  ],
+  "author": "NullPriest Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@openzeppelin/hardhat-upgrades": "^3.0.0",
+    "chai": "^4.3.10",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.9.0",
+    "hardhat": "^2.19.0",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.5"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1",
+    "@openzeppelin/contracts-upgradeable": "^5.0.1"
+  }
+}
